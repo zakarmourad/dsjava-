@@ -1,0 +1,37 @@
+package dsjava1;
+
+import java.util.*;
+
+public class Processor extends Thread {
+	private String PName;
+	private MyBuffer buff;
+	private Map<String,Integer> wordCounts =new HashMap<String,Integer>;
+	public Processor(String PName,MyBuffer buff){
+		this.PName=PName;
+		this.buff=buff;
+		
+	}
+	public void run() {
+		while (this.buff.data.size()>0) {
+			processe();
+		
+            
+    } 
+		
+	}
+	
+	public void processe() {
+		wordCounts.replace(this.buff.data.getFirst(), wordCounts.get(this.buff.data.getFirst())-1)  ;
+		this.buff.data.remove();
+		
+		
+		
+		
+	}
+	public HashMap<String, Integer> getWordCounts(){
+		
+	}
+	
+	
+
+}

@@ -1,0 +1,20 @@
+package dsjava1;
+
+import java.io.File;
+
+public class Teste {
+
+    public static void main(String[] args) {
+
+        String f = "C:\\Users\\TheShadow\\IdeaProjects\\complexe\\src\\com\\company\\ttf.txt";
+        String f2 = "C:\\Users\\TheShadow\\IdeaProjects\\complexe\\src\\com\\company\\tt.txt";
+        MyBuffer buffer = new MyBuffer(100);
+        Processor procssor = new Processor("Thread",buffer);
+        Processor procssor2= new Processor("Thread1",buffer);
+        procssor.start();
+        procssor2.start();
+        new Lecteur(f,"Thread",buffer).start();
+        new Lecteur(f2,"Thread1",buffer).start();
+
+    }
+}

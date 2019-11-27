@@ -1,0 +1,9 @@
+package dsjava1;
+
+public class Processor extends Thread {
+	private String PName;
+	private MyBuffer buff;
+	
+	
+
+}
